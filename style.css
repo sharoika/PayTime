@@ -1,0 +1,122 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.start { background: #10b981; color: white; }
+.pause { background: #f59e0b; color: white; }
+.reset { background: #ef4444; color: white; }
+.edit  { background: #6366f1; color: white; }
+
+.hidden {
+  display: none !important;
+}
+
+.earnings {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.emojis {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+#priceInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#priceInputs label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+
+#priceInputs input[type="number"] {
+  flex-grow: 1;
+  max-width: none;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-left: 0rem;
+  box-sizing: border-box;
+}

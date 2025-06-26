@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pay Time</title>
+  <meta name="description" content="Fun app to model how much you are making per second at work." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <h1>Pay Time</h1>
+
+        <div class="mode-selector">
+            <label><input type="radio" name="mode" value="hourly" checked /> Hourly Wage</label>
+            <label><input type="radio" name="mode" value="yearly" /> Yearly Salary</label>
+        </div>
+
+        <div id="hourlyInputs">
+            <label for="wage">Hourly Wage ($):</label>
+            <input type="number" id="wage" min="0" placeholder="e.g. 25" />
+        </div>
+
+        <div id="yearlyInputs" class="hidden">
+            <label for="salary">Yearly Salary ($):</label>
+            <input type="number" id="salary" min="0" placeholder="e.g. 52000" />
+            <label for="hours">Hours per Week:</label>
+            <input type="number" id="hours" min="1" max="168" placeholder="e.g. 40" />
+        </div>
+
+        <div class="buttons">
+            <button id="startBtn" class="start">Start</button>
+            <button id="pauseBtn" class="pause hidden">Pause</button>
+            <button id="resetBtn" class="reset hidden">Reset</button>
+            <button id="editPricesBtn" class="edit">🛠️ Edit Prices</button>
+        </div>
+
+        <div class="earnings">Earned: $<span id="earned">0.00</span></div>
+        <div class="emojis" id="emojiOutput"></div>
+    </div>
+
+    <div class="modal hidden" id="priceModal">
+        <div class="modal-content">
+            <h2>Set Item Prices</h2>
+            <div class='modal-input' id="priceInputs"></div>
+            <button id="savePrices">Save</button>
+            <button id="cancelPrices">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
